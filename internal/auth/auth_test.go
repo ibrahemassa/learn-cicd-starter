@@ -1,18 +1,18 @@
 package auth
 
 import (
-	"net/http"
 	"errors"
+	"net/http"
 	"reflect"
 	"testing"
 )
 
 func TestGetAPIKey(t *testing.T) {
 	tests := []struct {
-		name       string
-		headers    http.Header
-		wantKey    string
-		wantErr    error
+		name    string
+		headers http.Header
+		wantKey string
+		wantErr error
 	}{
 		{
 			name:    "valid API key",
@@ -60,4 +60,3 @@ func TestGetAPIKey(t *testing.T) {
 		})
 	}
 }
-
