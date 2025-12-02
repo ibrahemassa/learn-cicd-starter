@@ -34,7 +34,7 @@ jobs:
       #
       - name: Check linting
         uses: dominikh/staticcheck-action@v1
-          with:
-            version: "latest"
+        with:
+          version: "latest"
 
 
