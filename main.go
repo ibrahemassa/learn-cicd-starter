@@ -97,6 +97,3 @@ func main() {
 	log.Fatal(srv.ListenAndServe())
 }
 
-func troll(){
-	// I am a troll function lol
-}
