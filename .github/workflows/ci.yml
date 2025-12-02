@@ -28,10 +28,13 @@ jobs:
     steps:
       - name: Check fromatting
         run: test -z $(go fmt ./...); echo $?
-      
-      - name: Install staticchck
-        run: go install honnef.co/go/tools/cmd/staticcheck@latest
-
+      # 
+      # - name: Install staticchck
+      #   run: go install honnef.co/go/tools/cmd/staticcheck@latest
+      #
       - name: Check linting
-        run: staticchck ./...
+        uses: dominikh/staticcheck-action@v1
+          with:
+            version: "latest"
+
 
