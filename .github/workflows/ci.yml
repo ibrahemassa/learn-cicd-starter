@@ -28,3 +28,7 @@ jobs:
     steps:
       - name: Check fromatting
         run: test -z $(go fmt ./...); echo $?
+      
+      - name: Install staticchck
+        run: go install honnef.co/go/tools/cmd/staticcheck@latest
+
